@@ -1,0 +1,28 @@
+{
+  "name": "rev-file-cli",
+  "version": "1.0.0",
+  "description": "This is the cli for rev-file",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "repository": "benri/rev-file-cli",
+  "keywords": [
+    "rev",
+    "file"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "author": "Ben Leong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benri/rev-file-cli/issues"
+  },
+  "dependencies": {
+    "meow": "^3.7.0",
+    "rev-file": "^2.0.0"
+  }
+}
