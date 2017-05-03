@@ -7,11 +7,10 @@ var cli = meow({
   help: [
     'Usage',
     '  $ revfile <text>',
-    '  $ cat <file> | hasha',
     '',
     'Examples',
-    '  $ revfile unicorn ',
-    '  1abcb33beeb811dca15f0ac3e47b88d9'
+    '  $ revfile unicorn.js ',
+    '  unicorn-d41d8cd98f.js'
   ]
 });
 
@@ -23,7 +22,5 @@ if (!input && process.stdin.isTTY) {
 }
 
 if (input) {
-  console.log(revFile(input));
-} else {
-  process.stdin.pipe(revFile.stream()).pipe(process.stdout);
+  console.log(revFile.sync(input));
 }

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This is the cli for rev-file",
   "scripts": {
-    "test": "xo && ava"
+    "test": "ava"
   },
   "bin": {
     "filerev": "cli.js"
@@ -24,16 +24,11 @@
   "bugs": {
     "url": "https://github.com/benri/rev-file-cli/issues"
   },
-  "xo": {
-    "space": true,
-    "esnext": false
-  },
   "dependencies": {
     "meow": "^3.7.0",
     "rev-file": "^2.0.0"
   },
   "devDependencies": {
-    "ava": "*",
-    "xo": "*"
+    "ava": "*"
   }
 }
