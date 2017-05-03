@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "This is the cli for rev-file",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "xo && ava"
+  },
+  "bin": {
+    "filerev": "cli.js"
   },
   "engines": {
     "node": ">=4"
@@ -14,15 +17,23 @@
     "file"
   ],
   "files": [
-    "index.js"
+    "cli.js"
   ],
   "author": "Ben Leong",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/benri/rev-file-cli/issues"
   },
+  "xo": {
+    "space": true,
+    "esnext": false
+  },
   "dependencies": {
     "meow": "^3.7.0",
     "rev-file": "^2.0.0"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "xo": "*"
   }
 }
