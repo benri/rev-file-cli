@@ -14,18 +14,14 @@ $ npm install --save rev-file-cli
 ## Usage
 
 ```
-$ hasha --help
+$ filerev --help
 
   Usage
-    $ hasha <text>
+    $ filerev <text>
     $ cat <file> | hasha
 
-  Options
-    -a, --algorithm  Cipher algorithm: md5,sha1,sha256,sha512   [Default: sha512]
-    -e, --encoding   Output encoding: hex,base64,buffer,binary  [Default: hex]
-
   Examples
-    $ hasha unicorn --algorithm=md5
+    $ filerev unicorn
     1abcb33beeb811dca15f0ac3e47b88d9
 ```
 
