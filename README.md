@@ -18,11 +18,10 @@ $ filerev --help
 
   Usage
     $ filerev <text>
-    $ cat <file> | hasha
 
   Examples
-    $ filerev unicorn
-    1abcb33beeb811dca15f0ac3e47b88d9
+    $ filerev unicorn.js
+    unicorn-d41d8cd98f.js
 ```
 
 
