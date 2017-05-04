@@ -1,7 +1,5 @@
 # rev-file-cli [![Build Status](https://travis-ci.org/benri/rev-file-cli.svg?branch=master)](https://travis-ci.org/benri/rev-file-cli)
-This is the cli for rev-file
-
-> Get the revved file path of a file
+This is a cli utlity for adding revision hashes to file names either by renaming the src file or copying it to a destination folder by using the option `-d`
 
 
 ## Install
@@ -29,6 +27,18 @@ $ revfile --help
 	  $ revfile unicorn.js 
 	  unicorn-d41d8cd98f.js
 
+```
+
+## Piping stream output
+
+Information about the files updated or copied will output as string streams. The format of the output will look like this:
+
+```
+[original_filepath_1]
+[updated_filepath_1]
+...
+[original_filepath_n]
+[updated_filepath_n]
 ```
 
 

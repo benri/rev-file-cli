@@ -114,20 +114,29 @@ toStream(argv._)
     });
   }))
   .pipe(through(function (pathsObj, enc, next) {
+    var self = this;
     if (pathsObj.copy) {
       fs.createReadStream(pathsObj.oldPath)
         .pipe(fs.createWriteStream(pathsObj.newPath))
         .on('error', next)
-        .on('finish', next);
+        .on('finish', function () {
+          self.push(pathsObj.oldPath + '\n');
+          self.push(pathsObj.newPath + '\n');
+          next();
+        });
     } else {
       mv(pathsObj.oldPath, pathsObj.newPath, function (err) {
         if (err) {
           next(err);
+        } else {
+          self.push(pathsObj.oldPath + '\n');
+          self.push(pathsObj.newPath + '\n');
+          next();
         }
       });
-      next();
     }
   }))
+  .pipe(process.stdout)
   .on('error', function (err) {
     console.error(err);
   });
