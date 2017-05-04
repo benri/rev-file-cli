@@ -14,14 +14,21 @@ $ npm install --save rev-file-cli
 ## Usage
 
 ```
-$ filerev --help
+$ revfile --help
 
-  Usage
-    $ filerev <text>
+	Usage: revfile <path> [<path> ...]
 
-  Examples
-    $ filerev unicorn.js
-    unicorn-d41d8cd98f.js
+	  Renames a file with rev hash
+
+	Options:
+
+	  -h, --help   Display this usage info
+	  -d, --dest   Specify destination directory (if specified, will copy instead of replace)
+
+	Examples
+	  $ revfile unicorn.js 
+	  unicorn-d41d8cd98f.js
+
 ```
 
 
