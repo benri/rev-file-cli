@@ -1,6 +1,6 @@
 {
   "name": "rev-file-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is a cli utlity for adding revision hashes to file names",
   "scripts": {
     "test": "ava"
